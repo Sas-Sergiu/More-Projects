@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JS zoom</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+	<div>
+		<img id="slider" src="https://picsum.photos/id/439/200/300" />
+	</div>
+		<button onclick="zoomin()">+</button>
+		<button onclick="zoomout()">-</button>
+	
+<script>
+	
+	function zoomin(){
+	var slider = document.getElementById("slider");
+	var currWidth = slider.clientWidth;
+		slider.style.width = (currWidth + 20 ) + "px";
+	}
+	
+	function zoomout(){
+	var slider = document.getElementById("slider");
+	var currWidth = slider.clientWidth;
+	if(currWidth == 20 ) return false;
+		else {
+		slider.style.width = (currWidth - 20 ) + "px";
+		}
+	}
+
+</script>
+
+</body>
+</html>

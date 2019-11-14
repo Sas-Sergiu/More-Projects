@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="parsley.css">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script>
+
+	
+	<form id="userDetails" data-parsley-validate="">
+		<label for="fullname">Full Name * :</label>
+		</br>
+		<input type="text" class="form-control" name="fullname" data-parsley-pattern="^[a-zA-Z\s]+$" required="">
+		</br>
+		<label for="gender">You are a * :</label>
+		<p>
+			Male: <input type="radio" name="userGender" id="userGenderMale" value="Male" required="">
+			Female: <input type="radio" name="userGender" id="userGenderFemale" value="Female">
+		</p>
+		
+		<label for="email">Email * :</label>
+		</br>
+		<input type="email" class="form-control" name="email" data-parsley-trigger="change" required="">
+		</br>
+		
+		<label for="password1">Password * :</label>
+		</br>
+		<input id="password1" name="password" type="password" class="password"
+			data-parsley-minlength="8"
+			data-parsley-uppercase="1"
+			data-parsley-lowercase="1"
+			data-parsley-number="1"
+			data-parsley-special="1"
+			data-parsley-required />
+		<span class="errorspannewpassinput"></span>
+		
+		</br>
+		<label for="phone">Phone number * :</label>
+		</br>
+		<input type="text" class="text" name="mobilePhone" id="mobilePhone" data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" value="" />
+		
+		</br>
+		<label for="input-age">How old are you? * :</label>
+		</br>
+		
+		<input id="age" class="form-control" name="age"
+			data-parsley-type="number"
+			data-parsley-gte="10"
+			data-parsley-lte="100"
+			/>
+		
+		<br>
+		<input type="submit" class="btn btn-default" value="Validate">
+
+</form>
+	
+<script src="form.js"></script>
+
+</body>
+</html>
+
+
+
