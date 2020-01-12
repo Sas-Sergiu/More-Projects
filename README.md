@@ -5,5 +5,5 @@
 3.JS Animated Gallery		-Experimenting with anime.js pictures.
 4.Form Project			-Experimenting with parsley making a bit of a complex form.
 
-These are some other projects ive done to keep practicing and learning new skills.
+These are some other projects I have done to keep practicing and learning new skills.
 
